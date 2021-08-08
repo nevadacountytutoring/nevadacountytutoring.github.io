@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Tutoring Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"> </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</script>
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+ul#menu li {
+    display:inline;
+  }
+
+.big-btn {
+        width: 400px;
+        height: 200px;
+    }
+@media (min-width:768px){
+.modal-xxl {
+    width:90%;
+    max-width:1400px;
+}
+}
+</style>
+<body>
+
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <p class="w3-center w3-card w3-padding-large" style="font-size: 36px;margin-top:3cm; margin-bottom:3cm"> <img style="width: 50px; height: 50px; border: 1px solid black; float:left;"src="images/pasted_image_0.png">NEVADA COUNTY TUTORING </p>
+  <div class="w3-margin-left">
+    <div class="w3-bar-block w3-black">
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+      <a href="#contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTS</a>
+      <a href="#classesoffered" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CLASSES OFFERED</a>
+      <div class="w3-dropdown-hover w3-hide-small">
+        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+        <div class="w3-dropdown-content w3-bar-block w3-card-4">
+          <a href="./Resources.html" target="_blank" class="w3-bar-item w3-button">Additional Resources</a>
+        </div>
+ </div>
+
+ <div class="w3-center">
+  <!-- Main Image -->
+     <img class="w3-padding-large"src="images/osculating_circle.png"alt="Arclength" style="width:50%; margin-bottom:50px"/>
+    </div>
+
+  <!-- CONTACTS -->
+ <div class="w3-center w3-container">
+    <h style="font-size: 60px; margin-top:100px; margin-bottom:100px" class="w3-padding-large; w3-center">
+      <a id="contacts" style="text-decoration: none;color:white"> <b>CONTACT INFORMATION </b></a>
+    </h>
+
+<div style="margin-top:50px;margin-bottom:50px"class="w3-card w3-white w3-center w3-padding-large">
+    
+      <p href="mailto:samuelt@nevadacountytutoring.com" class="w3-center" style="font-size:30px">
+        <i class="fa fa-envelope-open"></i> 
+        <b class="w3-center">Email: samuelt@nevadacountytutoring.com
+        </b>
+    </p>
+<div class="container" style="float:center; margin-top:20px">
+      <button type="button" class="btn btn-primary big-btn" data-toggle="modal" data-target="#myModal">
+          <i style="font-size:30px"class="fa fa-video-camera"> </i>
+        <b style="font-size: 30px;">
+        Set Up A Zoom Meeting 
+        </b>
+      </button>
+     <div class="modal fade" id="myModal" role="dialog"> 
+        <div class="modal-dialog modal-xxl"> 
+         <div class="modal-content">
+          <div class="modal-header">
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1 class="modal-title">Please Enter The Following Information:</h1>
+            </div>
+           <div class="modal-body">
+              <form action="mailto:samuelt@nevadacountytutoring.com" method="POST" enctype="text/plain">
+                <div style="margin:50px">
+                <b style="font-size: 20px;">Email:</b> <br>
+                <input type="text" name="Email" size="50"><br>
+                </div>
+        
+                <b style="font-size: 20px;">Number of Hours or Minutes:</b> <br>
+                <div class="w3-row">
+                <input size="1" type="text" name="Number of Hours or Minutes">
+                 <select>
+                    <option>Minutes</option>
+                    <option>Hours</option>
+                 </select>
+                 </div>
+                 <div style="margin:50px">
+                <label for="subjects" style="font-size: 20px;">Pick a Subject:</label>
+                <select name="subjects" id="subjects">
+                  <option> Geometry </option>
+                  <option> Algebra 1 </option>
+                  <option> Algebra 2 </option>
+                  <option> PreCalculus </option>
+                  <option> Calculus AB </option>
+                  <option> Calculus BC </option>
+                  <option> Biology </option>
+                  <option> Chemistry </option>
+                  <option> Physics </option>
+                </select>
+                </div>
+                <div style="margin:50px">
+                <p><b style="font-size: 20px;">Please designate if this is an AP course:</b></p>
+                <input type="radio" id="ap" name="AP/noAP" value="AP">
+                <label for="ap">AP</label> <br>
+                <input type="radio" id="noap" name="AP/noAP" value="NOAP">
+                <label for="noap">Not an AP</label><br>
+                </div>
+                <div style="margin:50px;">
+                <b style="font-size: 20px;">Questions, Comments, Concerns:</b> <br>
+                <textarea id="Extra" name="extra" rows="5" cols="50"></textarea><br>
+                <div style="margin: 50px;">
+                <input size="20" type="submit" value="Send">
+                </div>
+                </div>
+
+
+              </form> 
+           </div>
+           <div class="modal-footer w3-center">
+            <p style="color: gray; font-size: 20px;"> Expect a response in under 24 hours</p>
+           </div>
+           </div>
+       
+       
+           </div>
+       
+        </div>
+       
+       </div>
+
+<div style="margin-top:20px; float:center"class="container">
+        <button type="button" class="btn btn-success big-btn" data-toggle="modal" data-target="#myModal2">
+            <i style="font-size:25px"class="fa fa-handshake-o"> </i>
+          <b style="font-size: 25px;">
+          Set Up An In-Person Session 
+          </b>
+        </button>
+       <div class="modal fade" id="myModal2" role="dialog"> 
+          <div class="modal-dialog"> 
+           <div class="modal-content">
+            <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h1 class="modal-title">Please Enter The Following Information</h1>
+              </div>
+             <div class="modal-body">
+              <form action="mailto:samuelt@nevadacountytutoring.com" method="POST" enctype="text/plain">
+                <div style="margin:50px">
+                <b style="font-size: 20px;">Email:</b> <br>
+                <input type="text" name="Email" size="50"><br>
+                </div>
+        
+                <b style="font-size: 20px;">Number of Hours or Minutes:</b> <br>
+                <div class="w3-row">
+                <input size="1" type="text" name="Number of Hours or Minutes">
+                 <select>
+                    <option>Minutes</option>
+                    <option>Hours</option>
+                 </select>
+                 </div>
+                 <div style="margin:50px">
+                <label for="subjects" style="font-size: 20px;">Pick a Subject:</label>
+                <select name="subjects" id="subjects">
+                  <option> Geometry </option>
+                  <option> Algebra 1 </option>
+                  <option> Algebra 2 </option>
+                  <option> PreCalculus </option>
+                  <option> Calculus AB </option>
+                  <option> Calculus BC </option>
+                  <option> Biology </option>
+                  <option> Chemistry </option>
+                  <option> Physics </option>
+                </select>
+                </div>
+                <div style="margin:50px">
+                <p><b style="font-size: 20px;">Please designate if this is an AP course:</b></p>
+                <input type="radio" id="ap" name="AP/noAP" value="AP">
+                <label for="ap">AP</label> <br>
+                <input type="radio" id="noap" name="AP/noAP" value="NOAP">
+                <label for="noap">Not an AP</label><br>
+                </div>
+                <div style="margin:50px">
+                  <b style="font-size: 20px;"> Please Specify A Location:</b> <br>
+                  <input type="text" name="locale" size="30">
+                </div>
+                <div style="margin:50px;">
+                <b style="font-size: 20px;">Questions, Comments, Concerns:</b> <br>
+                <textarea id="Extra" name="extra" rows="5" cols="50"></textarea><br>
+                <div style="margin: 50px;">
+                <input size="20" type="submit" value="Send">
+                </div>
+                </div>
+             </div>
+             <div class="modal-footer w3-center">
+              <p style="color: gray; font-size: 20px;"> Expect a response in under 24 hours</p>
+             </div>
+             </div>
+         
+         
+             </div>
+         
+          </div>
+         
+         </div>
+    </div>
+  </div>
+<div>
+
+<div class="w3-center">
+<ul id="menu" style="list-style-type:none;">
+<li><img class="w3-padding-large"src="images/right-riemann-sums-6-samples-reversed.svg"></li>
+<li><img style="width:500px"class="w3-padding-large" src="images/ethylene-molecule-147216721-574097265f9b58723d69f972.jpg"></li>
+<li> <img style="width:500px; height:365px" class="w3-padding-large" src="images/main-qimg-a48a5af95a69e710911e25dfb16c8e04.jpg"></li>
+</ul>
+</div>
+
+
+<!-- CLASSES OFFERED -->
+<h1 class="w3-center" style="font-size: 45px; margin:40px"> <a id="classesoffered" style="text-decoration: none;color:white"><b> CLASSES OFFERED </b></a> </h1>
+<h2 class="w3-center" style="color:gainsboro; font-size: 30px"> AP VARIANTS INCLUDED </h2>
+<div style="margin:50px"class="w3-container w3-white">
+<b>
+<ul id="menu" class="w3-center" style="list-style:none; float:center; margin:30px; text-align: center;">
+      <li style="margin:50px;font-size:27px; text-size-adjust: none; display:inline-block">GEOMETRY </li>
+      <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">ALGEBRA 1 </li>
+      <li style="margin:50px;font-size:27px; text-size-adjust:none;display:inline-block">ALGEBRA 2</li>
+    </ul>
+<ul id="menu" class="w3-center" style="list-style:none; float:center; margin:30px; text-align: center;">
+        <li style="margin:50px;font-size:27px; text-size-adjust:none; display:inline-block">PRECALCULUS </li>
+        <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">CALCULUS AB </li>
+        <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">CALCULUS BC</li>
+</ul>
+<ul id="menu" class="w3-center" style="list-style:none; float:center;margin:30px; text-align: center">
+    <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">BIOLOGY </li>
+    <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">CHEMISTRY </li>
+    <li style="margin:50px;font-size:27px; text-size-adjust: none;display:inline-block">PHYSICS 1,2,C</li>
+  </ul>
+</b>
+  </div>
+ 
+
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-padding-large w3-container w3-white w3-center">
+    <p style="font-size:12px; color:gray"> Some creative footer this is</p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
